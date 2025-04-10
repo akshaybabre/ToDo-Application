@@ -1,0 +1,84 @@
+<div class="dashboard-container">
+  <div class="dashboard-header bg-primary text-white p-3 shadow-sm">
+    <h2 class="d-flex justify-content-between align-items-center">
+      <span> User Dashboard </span>
+      <span id="active-user" class="bi bi-person-fill badge bg-light text-dark"> </span>
+      <button class="btn btn-danger" id="btn-signout">Sign Out</button>
+    </h2>
+  </div>
+
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between">
+      <button id="btnAddAppointment" data-bs-toggle="modal" data-bs-target="#add-appointment" class="btn-appointment">
+        🗓️ Add Appointment
+      </button>
+     <button id="deleteUser" class="btn btn-danger">Delete Account</button>
+    </div>
+
+    <!-- Add Appointment Modal -->
+    <div class="modal fade" id="add-appointment" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content custom-modal">
+          <div class="modal-header">
+            <h2 class="modal-title">✨ Add New Appointment</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <dl>
+
+              <dt>📌 Title</dt>
+              <dd><input id="appointment-title" type="text" class="form-control"></dd>
+
+              <dt>📝 Description</dt>
+              <dd><textarea id="appointment-description" class="form-control" rows="3"></textarea></dd>
+
+              <dt>📅 Date</dt>
+              <dd><input id="appointment-date" type="date" class="form-control"></dd>
+              
+            </dl>
+          </div>
+          <div class="modal-footer">
+            <button id="btn-add" class="btn btn-success">✅ Add</button>
+            <button class="btn btn-danger mx-2" data-bs-dismiss="modal">❌ Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Appointment Modal -->
+    <div class="modal fade" id="edit-appointment" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content custom-modal">
+          <div class="modal-header">
+            <h2 class="modal-title">✨ Edit Appointment</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <dl>
+              <input type="hidden" id="edit-appointment-id">
+              <dt>📌 Title</dt>
+              <dd><input id="edit-appointment-title" type="text" class="form-control"></dd>
+
+              <dt>📝 Description</dt>
+              <dd><textarea id="edit-appointment-description" class="form-control" rows="3"></textarea></dd>
+
+              <dt>📅 Date</dt>
+              <dd><input id="edit-appointment-date" type="date" class="form-control"></dd>
+            </dl>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="btn-save" class="btn btn-success">✅ Save</button>
+            <button class="btn btn-danger mx-2" data-bs-dismiss="modal">❌ Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🏥 Appointments Section Inside Container -->
+    <h3 class="text-center text-secondary mt-4">Your Appointments</h3>
+    <div class="appointment-cards row mt-3" id="appointment-cards">
+      <!-- Appointments will be added here dynamically -->
+    </div>
+
+  </div>
+</div>

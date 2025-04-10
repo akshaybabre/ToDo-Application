@@ -1,0 +1,23 @@
+{
+  "name": "todo-application",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api":"node ./api.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.5",
+    "bootstrap-icons": "^1.11.3",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jquery": "^3.7.1",
+    "jquery.cookie": "^1.4.1",
+    "mongodb": "^6.15.0"
+  }
+}
